@@ -79,7 +79,7 @@ class AzureStorage(Storage):
                 self.azure_container,
                 name
             )
-        except AzureMissingResourceHttpError:
+        except Exception:
             return None
 
     def _open(self, name, mode="rb"):
